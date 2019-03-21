@@ -3,7 +3,7 @@ name:'Trash Collectors',
 author:'Eiim',
 desc:'A simple mod that adds trash collection.',
 engineVersion:1,
-manifest:'modManifest.js',
+manifest:'0',
 requires:['Default dataset*'],
 sheets:{'gcSheet':'https://cdn.jsdelivr.net/gh/Eiim/LegacyTrashCollectors@master/GCSheet.png'},//custom stylesheet (note : broken in IE and Edge for the time being)
 func:function()
