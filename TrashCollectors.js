@@ -19,8 +19,8 @@ func:function()
 		upkeep:{'coin':0.1},
 		gizmos:true,
 		modes:{
-			'food removal':{name:'Remove [spoiled food]',icon:[3,7,3,7],desc:'Remove 100 [spoiled food].'},
-			'water removal':{name:'Remove [muddy water]',icon:[8,6,8,6],desc:'Remove 100 [muddy water].'}
+			'food removal':{name:'Remove spoiled food',icon:[3,7,3,7],desc:'Remove 100 [spoiled food].'},
+			'water removal':{name:'Remove muddy water',icon:[8,6,8,6],desc:'Remove 100 [muddy water].'}
 		},
 		effects:[
 			{type:'convert',from:{'spoiled food':100},into:{'spoiled food':0},every:1,repeat:1,mode:'food removal'},
@@ -33,7 +33,7 @@ func:function()
 	
 	new G.Tech({
 		name:'garbage collection',
-		desc:'@your people learn that keeping rotten food around is suboptimal.',
+		desc:'@Your people learn that keeping rotten food around is suboptimal.',
 		icon:[0,0,'gcSheet'],
 		cost:{'insight':10},
 		req:{'tool-making':true},
