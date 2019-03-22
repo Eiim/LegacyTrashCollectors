@@ -45,9 +45,7 @@ func:function()
 		icon:[0,0,'gcSheet'],
 		chance:10,
 		req:{'garbage collection':true},
-		effects:[
-			{type:'function',func:function(){G.getDict('garbage collector').turnToByContext['effects']['food removal']=0.2;}},//this is a custom function executed when we gain the trait
-		],
+		effects:[],
 	});
 
 }
