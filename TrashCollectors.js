@@ -5,14 +5,14 @@ desc:'A simple mod that adds trash collection.',
 engineVersion:1,
 manifest:'0',
 requires:['Default dataset*'],
-sheets:{'gcSheet':'https://cdn.jsdelivr.net/gh/Eiim/LegacyTrashCollectors@master/GCSheet.png'},//custom stylesheet (note : broken in IE and Edge for the time being)
+sheets:{'tcSheet':'https://cdn.jsdelivr.net/gh/Eiim/LegacyTrashCollectors@master/TCSheet.png'},//custom stylesheet (note : broken in IE and Edge for the time being)
 func:function()
 {
 	
 	new G.Unit({
-		name:'garbage collector',
+		name:'trash collector',
 		desc:'@removes [spoiled food] and [muddy water]',
-		icon:[0,0, 'gcSheet'],
+		icon:[0,0, 'tcSheet'],
 		cost:{},
 		use:{'worker':1},
 		staff:{'stone tools':1},
@@ -29,24 +29,24 @@ func:function()
 			{type:'convert',from:{'gem block':100},into:{'gem block':0},every:1,repeat:1,mode:'gem block removal'},
 			{type:'mult',value: 2,req:{'cleanliness':true}}
 		],
-		req:{'garbage collection':true},
+		req:{'trash collection':true},
 		category:'production',
 	});
 	
 	new G.Tech({
-		name:'garbage collection',
+		name:'trash collection',
 		desc:'@Your people learn that keeping rotten food around is suboptimal.',
-		icon:[0,0,'gcSheet'],
-		cost:{'insight':10},
+		icon:[0,0,'tcSheet'],
+		cost:{'insight':5},
 		req:{'tool-making':true},
 	});
 	
 	new G.Trait({
 		name:'cleanliness',
-		desc:'@[garbage collectors] clean trash twice as fast.',
-		icon:[0,0,'gcSheet'],
+		desc:'@[trash collectors] clean trash twice as fast.',
+		icon:[0,0,'tcSheet'],
 		chance:10,
-		req:{'garbage collection':true},
+		req:{'trash collection':true},
 		effects:[],
 	});
 
